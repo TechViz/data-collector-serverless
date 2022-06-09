@@ -1,0 +1,37 @@
+{
+	"name": "monada-back",
+	"version": "1.0.0",
+	"description": "",
+	"main": "handler.js",
+	"scripts": {
+		"build": "webpack",
+		"deploy": "terraform -chdir=\"./terraform\" apply",
+		"deploy-force": "npm run deploy -- -auto-approve",
+		"build-deploy": "npm run build && npm run deploy",
+		"build-deploy-force": "npm run build && npm run deploy-force",
+		"lint": "tsc --noEmit",
+		"upgrade": "npx npm-check-updates -u"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"devDependencies": {
+		"@types/aws-lambda": "^8.10.85",
+		"@types/bcryptjs": "^2.4.2",
+		"@types/jsonwebtoken": "^8.5.5",
+		"@types/node": "^16.11.7",
+		"@types/uuid": "^8.3.1",
+		"prettier": "^2.4.1",
+		"ts-loader": "^9.2.6",
+		"typescript": "^4.5.4",
+		"webpack": "^5.66.0",
+		"webpack-cli": "^4.9.1"
+	},
+	"dependencies": {
+		"aws-sdk": "^2.1024.0",
+		"bcryptjs": "^2.4.3",
+		"jsonwebtoken": "^8.5.1",
+		"uuid": "^8.3.2",
+		"v8n": "github:imbrn/v8n"
+	}
+}

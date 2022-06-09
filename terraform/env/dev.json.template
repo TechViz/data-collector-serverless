@@ -1,0 +1,5 @@
+{
+	"environment_name": "dev",
+	"SIGNUP_SECRET": "",
+	"JWT_SECRET": ""
+}
