@@ -24,13 +24,13 @@ provider "aws" {
 
 
 resource "aws_s3_bucket" "s3_lambda_source_code_bucket" {
-	bucket = "${local.project_prefix}-${local.environment_name}-lambda-source-code"
-	acl    = "private"
-	versioning {
-		enabled = true
-	}
+  bucket = "${local.project_prefix}-${local.environment_name}-lambda-source-code"
+  acl    = "private"
+  versioning {
+    enabled = true
+  }
 
-	lifecycle {
-	  prevent_destroy = true
-	}
+  lifecycle {
+    prevent_destroy = true
+  }
 }

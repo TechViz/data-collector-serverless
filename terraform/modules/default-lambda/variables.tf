@@ -1,5 +1,5 @@
 variable "method" {
-	type = string
+  type = string
 }
 
 variable "path" {
@@ -7,44 +7,44 @@ variable "path" {
 }
 
 variable "handler_filename" {
-	type = string
+  type = string
 }
 
 variable "handler_entry_point" {
-	type = string
+  type = string
 }
 
 variable "project_prefix" {
-	type = string
+  type = string
 }
 
 variable "environment_name" {
-	type = string
+  type = string
 }
 
 variable "api_gateway_id" {
-	type = string
+  type = string
 }
 
 variable "api_gateway_execution_arn" {
-	type = string
+  type = string
 }
 
 variable "code_bucket" {
-	type = string
+  type = string
 }
 
 variable "environment_variables" {
-	description = "Environment variables available to the function"
-	type = any
+  description = "Environment variables available to the function"
+  type        = any
 }
 
 variable "timeout" {
-	description = "Time (in seconds) for the function to timeout"
-	type = number
-	default = 3
+  description = "Time (in seconds) for the function to timeout"
+  type        = number
+  default     = 3
 }
 
 locals {
-	lambda_name = "${var.project_prefix}-${var.handler_filename}-${var.handler_entry_point}-${var.environment_name}"
+  lambda_name = "${var.project_prefix}-${var.handler_filename}-${var.handler_entry_point}-${var.environment_name}"
 }
