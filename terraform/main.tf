@@ -9,11 +9,11 @@ terraform {
   required_version = ">= 0.14.9"
 
   backend "s3" {
-    bucket = "monada-terraform-states"
-    key    = "monada-analytics"
+    bucket               = "techviz-terraform-states"
+    key                  = "techviz-data-collector"
     workspace_key_prefix = "environments"
-    region = "us-east-1"
-    profile = "tech_viz"
+    region               = "us-east-1"
+    profile              = "tech_viz"
   }
 }
 

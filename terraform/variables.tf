@@ -1,5 +1,5 @@
 locals {
-	project_prefix = "monada-analytics"
+  project_prefix   = "techviz-data-collector"
 	environment_name = local.workspace_vars.environment_name
 
 	JWT_SECRET = sensitive(local.workspace_vars.JWT_SECRET)
